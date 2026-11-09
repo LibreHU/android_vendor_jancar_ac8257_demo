@@ -1,5 +1,7 @@
 # android_vendor_jancar_ac8257_demo
 
+*English: [README.en.md](README.en.md)*
+
 Fichiers propriétaires côté `/system` pour **LineageOS 16.0** sur l'autoradio Jancar **UJC201** (AC8257), à placer
 dans `vendor/jancar/ac8257_demo` (arbre : [android_device_alps_ac8257_demo](https://github.com/LibreHU/android_device_alps_ac8257_demo),
 branche `lineage-16.0`, guide `docs/BUILD.md`). Branche `lineage-16.0`. Makefiles écrits par `setup-makefiles.sh` de

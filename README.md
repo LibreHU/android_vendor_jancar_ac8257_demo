@@ -13,10 +13,15 @@ La partition vendor stock entière (`vendor.img`, 2 Gio) se pose aussi dans ce d
 | Fichier | Source | Rôle |
 |---|---|---|
 | `proprietary/framework/autochips.jar` | ROM stock `UJC201-V1.151R6` : `system/framework/autochips.jar` (vide) + `boot-autochips.vdex` | jar du BOOTCLASSPATH (`PRODUCT_BOOT_JARS += autochips`) : `AtcMetazone`, `AtcLogo`, `BackCar`, `LocalBluetoothManager`, CarPlay / iAP2, DVR, AVM… (418 classes) |
+| `proprietary/lib{,64}/vendor.autochips.hardware.*@*.so` (9 en 32 bits, 10 en 64 bits) | même ROM, `/system/lib{,64}` | interfaces HIDL des HAL Autochips du vendor (côté clients) |
+| `proprietary/lib{,64}/lib{atcavm,atcvobsub,dvr,logo,metazone}_jni.so` | même ROM | bibliothèques JNI de `autochips.jar` |
+| `proprietary/lib{,64}/libusbdvr.so` | même ROM | dépendance de `libdvr_jni.so` (enregistrement USB) |
 
-À venir (2e extraction du `/system` stock) : les 18 interfaces HIDL `vendor.autochips.hardware.*@*.so` de
-`proprietary-files.txt` (en attendant, `extract-files.sh ~/stock` les reprend au build) et les bibliothèques JNI de
-`autochips.jar` (`lib{metazone,logo,dvr,atcavm,atcvobsub}_jni.so` et leurs dépendances).
+Toutes les autres dépendances (`NEEDED`) de ces fichiers sont dans LineageOS 16.0 (`libhidltransport`,
+`libmedia_omx`, `libstagefright_foundation`, `libstdc++`, `android.hidl.*`…). Liste et empreintes : relevé
+`stock_extract_vendor.sh` (debugfs sur le `system.img` stock, lecture seule) ; même liste que `proprietary-files.txt`
+de l'arbre. Autre firmware que V1.151R6 : `extract-files.sh ~/stock` reprend ces fichiers de votre `/system` (le jar,
+épinglé, reste celui d'ici).
 
 ## Désodexage de autochips.jar
 
@@ -38,7 +43,7 @@ le garde au lieu de le refaire.
 Empreintes : stock `autochips.jar` sha256 `364603c0…dec96`, `boot-autochips.vdex` sha256 `9fe6787f…cbef2d` ; jar
 d'ici sha1 `18a76522…56fde3`.
 
-Vérifié avant publication : aucune adresse MAC, numéro de série ni certificat (Apple MFi ou autre) dans le jar.
+Vérifié avant publication : aucune adresse MAC, numéro de série ni certificat (Apple MFi ou autre) dans ces fichiers.
 
 ## Licence
 

@@ -75,7 +75,9 @@ PRODUCT_COPY_FILES += \
     vendor/jancar/ac8257_demo/proprietary/lib64/libjpeg-alpha.so:system/lib64/libjpeg-alpha.so \
     vendor/jancar/ac8257_demo/proprietary/lib64/libpq_prot_mtk.so:system/lib64/libpq_prot_mtk.so \
     vendor/jancar/ac8257_demo/proprietary/lib64/vendor.mediatek.hardware.power@2.0.so:system/lib64/vendor.mediatek.hardware.power@2.0.so \
-    vendor/jancar/ac8257_demo/proprietary/lib64/vendor.mediatek.hardware.pq@2.0.so:system/lib64/vendor.mediatek.hardware.pq@2.0.so
+    vendor/jancar/ac8257_demo/proprietary/lib64/vendor.mediatek.hardware.pq@2.0.so:system/lib64/vendor.mediatek.hardware.pq@2.0.so \
+    vendor/jancar/ac8257_demo/proprietary/bin/atcavm_server:system/bin/atcavm_server \
+    vendor/jancar/ac8257_demo/proprietary/lib64/libmetazone.so:system/lib64/libmetazone.so
 
 PRODUCT_PACKAGES += \
     autochips \

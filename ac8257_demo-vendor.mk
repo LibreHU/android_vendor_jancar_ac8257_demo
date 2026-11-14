@@ -45,7 +45,38 @@ PRODUCT_COPY_FILES += \
     vendor/jancar/ac8257_demo/proprietary/lib64/vendor.autochips.hardware.fastdisplay@2.0.so:system/lib64/vendor.autochips.hardware.fastdisplay@2.0.so \
     vendor/jancar/ac8257_demo/proprietary/lib64/vendor.autochips.hardware.iap@1.0.so:system/lib64/vendor.autochips.hardware.iap@1.0.so \
     vendor/jancar/ac8257_demo/proprietary/lib64/vendor.autochips.hardware.metalogo@1.0.so:system/lib64/vendor.autochips.hardware.metalogo@1.0.so \
-    vendor/jancar/ac8257_demo/proprietary/lib64/vendor.autochips.hardware.watermark@1.0.so:system/lib64/vendor.autochips.hardware.watermark@1.0.so
+    vendor/jancar/ac8257_demo/proprietary/lib64/vendor.autochips.hardware.watermark@1.0.so:system/lib64/vendor.autochips.hardware.watermark@1.0.so \
+    vendor/jancar/ac8257_demo/proprietary/lib/libwatermark.so:system/lib/libwatermark.so \
+    vendor/jancar/ac8257_demo/proprietary/lib/libwatermark_config.so:system/lib/libwatermark_config.so \
+    vendor/jancar/ac8257_demo/proprietary/lib/libwatermark_impl.so:system/lib/libwatermark_impl.so \
+    vendor/jancar/ac8257_demo/proprietary/lib/libwatermark_jni.so:system/lib/libwatermark_jni.so \
+    vendor/jancar/ac8257_demo/proprietary/lib/libwatermark_service.so:system/lib/libwatermark_service.so \
+    vendor/jancar/ac8257_demo/proprietary/lib/libdpframework_mtk.so:system/lib/libdpframework_mtk.so \
+    vendor/jancar/ac8257_demo/proprietary/lib/libged_sys.so:system/lib/libged_sys.so \
+    vendor/jancar/ac8257_demo/proprietary/lib/libgralloc_extra_sys.so:system/lib/libgralloc_extra_sys.so \
+    vendor/jancar/ac8257_demo/proprietary/lib/libgraphics2d_ext.so:system/lib/libgraphics2d_ext.so \
+    vendor/jancar/ac8257_demo/proprietary/lib/libion_mtk_sys.so:system/lib/libion_mtk_sys.so \
+    vendor/jancar/ac8257_demo/proprietary/lib/libion_ulit_sys.so:system/lib/libion_ulit_sys.so \
+    vendor/jancar/ac8257_demo/proprietary/lib/libjpeg-alpha.so:system/lib/libjpeg-alpha.so \
+    vendor/jancar/ac8257_demo/proprietary/lib/libpq_prot_mtk.so:system/lib/libpq_prot_mtk.so \
+    vendor/jancar/ac8257_demo/proprietary/lib/vendor.mediatek.hardware.power@2.0.so:system/lib/vendor.mediatek.hardware.power@2.0.so \
+    vendor/jancar/ac8257_demo/proprietary/lib/vendor.mediatek.hardware.pq@2.0.so:system/lib/vendor.mediatek.hardware.pq@2.0.so \
+    vendor/jancar/ac8257_demo/proprietary/lib64/libwatermark.so:system/lib64/libwatermark.so \
+    vendor/jancar/ac8257_demo/proprietary/lib64/libwatermark_config.so:system/lib64/libwatermark_config.so \
+    vendor/jancar/ac8257_demo/proprietary/lib64/libwatermark_impl.so:system/lib64/libwatermark_impl.so \
+    vendor/jancar/ac8257_demo/proprietary/lib64/libwatermark_jni.so:system/lib64/libwatermark_jni.so \
+    vendor/jancar/ac8257_demo/proprietary/lib64/libwatermark_service.so:system/lib64/libwatermark_service.so \
+    vendor/jancar/ac8257_demo/proprietary/lib64/libdpframework_mtk.so:system/lib64/libdpframework_mtk.so \
+    vendor/jancar/ac8257_demo/proprietary/lib64/libged_sys.so:system/lib64/libged_sys.so \
+    vendor/jancar/ac8257_demo/proprietary/lib64/libgralloc_extra_sys.so:system/lib64/libgralloc_extra_sys.so \
+    vendor/jancar/ac8257_demo/proprietary/lib64/libgraphics2d_ext.so:system/lib64/libgraphics2d_ext.so \
+    vendor/jancar/ac8257_demo/proprietary/lib64/libion_mtk_sys.so:system/lib64/libion_mtk_sys.so \
+    vendor/jancar/ac8257_demo/proprietary/lib64/libion_ulit_sys.so:system/lib64/libion_ulit_sys.so \
+    vendor/jancar/ac8257_demo/proprietary/lib64/libjpeg-alpha.so:system/lib64/libjpeg-alpha.so \
+    vendor/jancar/ac8257_demo/proprietary/lib64/libpq_prot_mtk.so:system/lib64/libpq_prot_mtk.so \
+    vendor/jancar/ac8257_demo/proprietary/lib64/vendor.mediatek.hardware.power@2.0.so:system/lib64/vendor.mediatek.hardware.power@2.0.so \
+    vendor/jancar/ac8257_demo/proprietary/lib64/vendor.mediatek.hardware.pq@2.0.so:system/lib64/vendor.mediatek.hardware.pq@2.0.so
 
 PRODUCT_PACKAGES += \
-    autochips
+    autochips \
+    AtcWatermark

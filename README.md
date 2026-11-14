@@ -18,6 +18,9 @@ La partition vendor stock entière (`vendor.img`, 2 Gio) se pose aussi dans ce d
 | `proprietary/lib{,64}/vendor.autochips.hardware.*@*.so` (9 en 32 bits, 10 en 64 bits) | même ROM, `/system/lib{,64}` | interfaces HIDL des HAL Autochips du vendor (côté clients) |
 | `proprietary/lib{,64}/lib{atcavm,atcvobsub,dvr,logo,metazone}_jni.so` | même ROM | bibliothèques JNI de `autochips.jar` |
 | `proprietary/lib{,64}/libusbdvr.so` | même ROM | dépendance de `libdvr_jni.so` (enregistrement USB) |
+| `proprietary/app/AtcWatermark/AtcWatermark.apk` | même ROM, `/system/app` | service watermark (`com.autochips.watermarkservice`, UID system, persistant) : sert `IWatermark/WatermarkService` (déclaré dans le manifeste du vendor stock) au HAL 360° (`avmhal`), qui incruste date, heure, GPS et vitesse dans les enregistrements du kit 360° ; envoie l'heure et la position GPS chaque seconde. Re-signé avec la clé plateforme (module `AtcWatermark`) |
+| `proprietary/lib{,64}/libwatermark{,_config,_impl,_jni,_service}.so` | même ROM | serveur natif du watermark (rendu Skia + FreeType, `/vendor/etc/atc_watermark_config.xml`) |
+| `proprietary/lib{,64}/lib{dpframework_mtk,ged_sys,gralloc_extra_sys,graphics2d_ext,ion_mtk_sys,ion_ulit_sys,jpeg-alpha,pq_prot_mtk}.so`, `vendor.mediatek.hardware.{power,pq}@2.0.so` | même ROM | dépendances MediaTek du watermark (NEEDED, extraites par `stock_extract_vendor.sh` le 14/11/2026 ; sha1 vérifiés) |
 
 Toutes les autres dépendances (`NEEDED`) de ces fichiers sont dans LineageOS 16.0 (`libhidltransport`,
 `libmedia_omx`, `libstagefright_foundation`, `libstdc++`, `android.hidl.*`…). Liste et empreintes : relevé

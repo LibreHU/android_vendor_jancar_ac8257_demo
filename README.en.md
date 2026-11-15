@@ -2,6 +2,11 @@
 
 *Français : [README.md](README.md)*
 
+**Branch `lineage-17.1`**: the same files for **LineageOS 17.1** (Android 10, experimental; tree branch
+`lineage-17.1`, guide `docs/LINEAGE-17.1.en.md` of the tree). Only difference with `lineage-16.0`: `autochips.jar`
+is a Soong module (`Android.bp`, `dex_import`), no longer a Make one, as Android 10 builds the boot image of the
+`PRODUCT_BOOT_JARS` in Soong.
+
 Proprietary `/system` files for **LineageOS 16.0** on the Jancar **UJC201** head unit (AC8257), to be placed in
 `vendor/jancar/ac8257_demo` (tree: [android_device_alps_ac8257_demo](https://github.com/LibreHU/android_device_alps_ac8257_demo),
 branch `lineage-16.0`, guide `docs/BUILD.en.md`). Branch `lineage-16.0`. Makefiles written by the tree's

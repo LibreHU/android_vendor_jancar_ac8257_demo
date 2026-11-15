@@ -18,15 +18,7 @@ LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),ac8257_demo)
 
-include $(CLEAR_VARS)
-LOCAL_MODULE := autochips
-LOCAL_MODULE_OWNER := jancar
-LOCAL_SRC_FILES := proprietary/framework/autochips.jar
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := JAVA_LIBRARIES
-LOCAL_MODULE_SUFFIX := .jar
-include $(BUILD_PREBUILT)
+# autochips (jar du BOOTCLASSPATH) : module Soong, Android.bp (LineageOS 17.1).
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := AtcWatermark
